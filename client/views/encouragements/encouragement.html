@@ -1,0 +1,14 @@
+<template name="encouragement">
+<div class="encouragements">
+  <li>
+    <h4>
+      <span class="author">{{author}}</span>
+      <span class="date">on {{submittedDate}}</span>
+    </h4>
+    <p class="content">{{body}}</p>
+		<div id="editLink">
+				{{#if ownEncouragement}}<a href="{{pathFor 'encouragementEdit' params=this}}">Edit</a>{{/if}}
+			</div>
+  </li>
+</div>
+</template>

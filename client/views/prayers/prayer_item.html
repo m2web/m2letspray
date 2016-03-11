@@ -1,0 +1,24 @@
+<template name="prayerItem">
+  <div class="prayer">
+    <div class="prayer-content">
+      <h3><div><a href="prayers/{{userId}}">{{author}}</a> on {{datePosted}}</div>{{request}} </h3>
+			<div>
+				{{#if ownPrayer}}<a href="{{pathFor 'prayerEdit' params=this}}">Edit</a>{{/if}}
+			</div>
+			{{#if encouragementCountGTZero}}<a href="#" class="encourageShow"> 
+				See {{encouragementCount}} {{#if encouragementCountGTOne}}Encouragements{{else}}Encouragement{{/if}}</a> 
+			{{else}}
+				{{#unless ownPrayer}}{{#if currentUser}}<a href="{{pathFor 'encouragementSubmit' params=this}}">Encourage Them Here</a>{{/if}}{{/unless}}
+			{{/if}}
+			
+			<div id="encouragements{{_id}}" style="display: none">
+				{{#unless ownPrayer}}{{#if currentUser}}<a href="{{pathFor 'encouragementSubmit' params=this}}">Encourage Them Here</a><br/>{{/if}}{{/unless}}
+				<ul>
+				 {{#each encouragements}}
+					{{> encouragement}}
+					{{/each}}
+				</ul>
+			</div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,14 @@
+<template name="prayersList">
+  <div class="prayers">
+    {{#each prayers}}
+      {{> prayerItem}}
+    {{/each}}
+		{{#if prayersReady}}
+      {{#unless allPrayersLoaded}}
+        <a class="load-more" href="#">Load more</a>
+      {{/unless}}
+    {{else}}
+      <div>{{> spinner}}</div>
+    {{/if}}
+  </div>
+</template>
