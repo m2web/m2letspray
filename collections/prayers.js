@@ -33,7 +33,7 @@ Meteor.methods({
     // without waiting for the email sending to complete.
     this.unblock();
 	
-		var toAddresses = new Array("m2web@yahoo.com");
+		var toAddresses = new Array("m2web@yahoo.com, mark.mcfadden@wslife.com");
 		var fromEmail = "msquaredwebsvc@gmail.com";
 		
 		Email.send({
