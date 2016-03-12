@@ -5,4 +5,10 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 #will need to ignore this for your production implemenation
+
+###Note that the configurations for Facebook authentication are set on Heroku by the doing the following###
+#1. update the settings.json file with the content of the settings_live.json file that is set to be ignored below.
+#2. issue the following from a command prompt: heroku config:add METEOR_SETTINGS="$(cat settings.json)".
+#Or you could login to the app's dashboard at https://dashboard.heroku.com/apps/m2letspray/, go to Settings and change it there
+#Simply changing and then uploading the settings.json file will not update the config in Heroku.
 settings_live.json
