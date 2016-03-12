@@ -6,4 +6,4 @@
 
 #will need to ignore this for your production implemenation
 settings_live.json
-startup.js
+#startup.js
