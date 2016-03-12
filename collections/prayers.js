@@ -26,15 +26,14 @@ Meteor.methods({
 			throw new Meteor.Error(422, 'Please fill in a request');
 		
   },
-	sendEmail: function (requestor) {
+  sendEmail: function (requestor) {
     check([requestor], [String]);
 		
     // Let other method calls from the same client start running,
     // without waiting for the email sending to complete.
     this.unblock();
 	
-		//mcfaddenSmallGrp@groups.facebook.com is the group email
-		var toAddresses = new Array("m2web@yahoo.com","davidmichael@graceky.org","esheidel@hotmail.com","seancbarry@yahoo.com","jevans6us@yahoo.com", "dabears@fuse.net");
+		var toAddresses = new Array("m2web@yahoo.com");
 		var fromEmail = "msquaredwebsvc@gmail.com";
 		
 		Email.send({
@@ -43,7 +42,7 @@ Meteor.methods({
 			//bcc: bccEmail,
 			replyTo: fromEmail || undefined,
 			subject: "Prayer Page Update",
-			text: requestor + " has added or edited a prayer request. Go to: http://m2smgrpdaily.meteor.com to see the item for which to pray."
+			text: requestor + " has added or edited a prayer request. Go to: http://m2letspray.herokuapps.com to see the item for which to pray."
 			});
 		}
 });
