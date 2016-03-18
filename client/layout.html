@@ -1,9 +1,11 @@
 <template name="layout">
-  <div class="container col-md-12">
-    {{> header}}
-		{{> errors}}
-    <div>
-		{{> yield}}
+    <div class="row">
+        <div class="container">
+            {{> header}}
+                {{> errors}}
+            <div>
+                {{> yield}}
+            </div>
+        </div>
     </div>
-  </div>
 </template>
