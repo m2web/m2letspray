@@ -1,22 +1,23 @@
 <template name="header">
-  <header class="navbar">
-    <div class="navbar-inner">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="{{pathFor 'prayersList'}}">Prayer List</a>
-      <div class="nav-collapse collapse">
-			{{#if currentUser}}
-				 <ul class="nav">
-          <li><a href="{{pathFor 'prayerSubmit'}}">New Request</a></li>
-        </ul>
-				{{/if}}
-        <ul class="nav pull-right">
-					{{> user_info}}
-        </ul>
-      </div>
-    </div>
-  </header>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{pathFor 'prayersList'}}">Prayer List</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+            {{#if currentUser}}
+                <ul class="nav navbar-nav">
+                    <li><a href="{{pathFor 'prayerSubmit'}}">New Request</a></li>
+                </ul>
+            {{/if}}
+            <ul class="nav navbar-nav navbar-right">
+                {{> user_info}}
+            </ul>
+        </div>
+    </nav>
 </template>
