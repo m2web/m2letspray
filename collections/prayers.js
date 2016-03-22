@@ -44,7 +44,7 @@ Meteor.methods({
 			//bcc: bccEmail,
 			replyTo: fromEmail || undefined,
 			subject: "Prayer Page Update",
-			text: requestor + " has added or edited a prayer request. Go to: http://m2letspray.herokuapps.com to see the item for which to pray."
+			text: requestor + " has added or edited a prayer request. Go to: https://m2letspray.herokuapps.com to see the item for which to pray."
 			});
 		}
 });
