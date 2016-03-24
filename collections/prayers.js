@@ -33,10 +33,10 @@ Meteor.methods({
     // without waiting for the email sending to complete.
     this.unblock();
 	
-		var toAddresses = new Array("msquaredwebsvc@gmail.com,hank.pryor@kingdomproductions.net,averyortho@yahoo.com");
+		var toAddresses = new Array("m2web@yahoo.com,hank.pryor@kingdomproductions.net,averyortho@yahoo.com");
         //remaining men's email addresses
         //alex.owsley@yahoo.com,dnsmkt1@yahoo.com,esheidel@hotmail.com,isaac.kain@campusoutreach.org,jevans6us@yahoo.com,mtcole2@gmail.com,rkbular@sbcglobal.net,seancbarry@yahoo.com,troy.benton1@gmail.com
-		var fromEmail = "m2web@yahoo.com";
+		var fromEmail = "msquaredwebsvc@gmail.com";
 		
 		Email.send({
 			from: fromEmail,
