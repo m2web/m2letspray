@@ -14,5 +14,6 @@ mrt:connect@2.22.0-1
 service-configuration
 iron:router@0.9.1
 msavin:mongol
-standard-minifiers
 twbs:bootstrap
+standard-minifier-css
+standard-minifier-js
