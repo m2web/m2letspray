@@ -1,8 +1,0 @@
-{
-  "name": "m2letspray",
-  "description": "A MeteorJS app where you can share prayer request",
-  "version": "1.5.0",
-  "engines": {
-    "node": "7.10.1"
-  }
-}
